@@ -74,7 +74,7 @@ public class Main {
                 System.out.println("Попробуйте снова");
                 t = false;
             }
-        } while (t != true);
+        } while (!t);
 
         // Use the Builder pattern to create the new ParachuteDTO
         ParachuteDTO newParachute = ParachuteDTO.builder()
