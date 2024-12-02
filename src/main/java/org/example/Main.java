@@ -52,7 +52,7 @@ public class Main {
         String description = "";
         boolean t = true;
         do {
-            System.out.println("Введите данные о делтаплане в формате cost,name,description:");
+            System.out.println("Введите данные о делтаплане в формате cost,name,description (обязательно через запятую):");
             try {
                 String input = scanner.nextLine();
                 String[] parts = input.split(",");
@@ -67,7 +67,7 @@ public class Main {
                         storage.getList().stream().anyMatch(ParachuteDTO -> ParachuteDTO.getDescription().equals(finalDescription)) &&
                         storage.getList().stream().anyMatch(CategoryDto -> CategoryDto.getName().equals(finalName))
                 ) {
-                    System.out.println("Такой дельтаплан уже получен!");
+                    System.out.println("Такой дельтаплан уже есть!");
                     return;
                 }
             } catch (Exception e) {
